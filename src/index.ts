@@ -15,6 +15,10 @@ app.get("/:id", async (req, res) => {
     res.send(Buffer.from(pdfB64, "base64"));
 });
 
+app.get("/health", (req, res) => {
+    res.status(200).send({});
+});
+
 app.listen(9000, () => {
     console.log("Listening on port", 9000);
 });
